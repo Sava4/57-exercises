@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: synthwave --default;
+  root: ":root";
+  include: [
+    "button",
+    "input", 
+    "chat",
+    "loading",
+    "avatar",
+    "hero"
+  ];
+  exclude: ;
+  prefix: ;
+  logs: true;
+}
