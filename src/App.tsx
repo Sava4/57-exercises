@@ -55,6 +55,7 @@ function App() {
       .finally(() => {
         setLoading(false)
         inputRef.current?.focus()
+        inputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })
       })
   }
 
