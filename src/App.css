@@ -2,14 +2,7 @@
 @plugin "daisyui" {
   themes: synthwave --default;
   root: ":root";
-  include: [
-    "button",
-    "input", 
-    "chat",
-    "loading",
-    "avatar",
-    "hero"
-  ];
+  include: ;
   exclude: ;
   prefix: ;
   logs: true;

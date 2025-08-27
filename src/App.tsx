@@ -68,7 +68,7 @@ function App() {
     <>
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content text-center">
-          <div className="max-w-md">
+          <div className="w-full sm:max-w-lg">
             {chat.map((msg, idx) => (
               <ChatMessage key={idx} from={msg.from} message={msg.message} />
             ))}
@@ -77,19 +77,19 @@ function App() {
                 <span className="loading loading-dots loading-xl"></span>
               </div>
             )}
-            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-lg border p-4">
+            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full sm:w-lg border p-4">
               <div className="join">
                 <input 
                   ref={inputRef} 
                   type="text" 
-                  className="input join-item input-xl" 
+                  className="input join-item input-md flex-1 sm:input-xl" 
                   placeholder="Message" 
                   onChange={e => setMessage(e.target.value)} 
                   onKeyDown={handleKeyDown}
                   value={message} 
                 />
                 <button
-                  className="btn join-item btn-primary btn-xl"
+                  className="btn join-item btn-primary btn-md sm:btn-xl"
                   disabled={!message.trim() || loading}
                   onClick={handleSendMessage} >
                   Send
